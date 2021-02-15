@@ -53,7 +53,7 @@ export type ParsedAuthorizationResponse =
       { processorTransactionId: string },
       'AUTHORIZED' | 'CANCELLED' | 'SETTLING' | 'SETTLED'
     >
-  | IAuthResponse<{ declineReason: string }, 'DECLINED'>
+  | IAuthResponse<{ declineReason: DeclineReason }, 'DECLINED'>
   | IAuthResponse<{ errorMessage: string }, 'FAILED'>;
 
 export interface RawCaptureRequest<T> extends IProcessorRequest<T> {
@@ -74,7 +74,6 @@ export interface RawCancelRequest<T> extends IProcessorRequest<T> {
 
 export interface ParsedCancelResponse {
   transactionStatus: TransactionStatus;
-  declineReason?: DeclineReason;
   errorMessage?: string;
 }
 
