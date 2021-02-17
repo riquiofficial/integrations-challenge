@@ -29,7 +29,7 @@ async function testAuthTransaction(): Promise<ParsedAuthorizationResponse> {
         expiryYear: 2022,
         cardholderName: 'Mr Foo Bar',
         cvv: '020',
-        cardNumber: '4111111111111111',
+        cardNumber: '4000000000000069',
       },
     });
   } catch (e) {
