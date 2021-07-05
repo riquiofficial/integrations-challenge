@@ -40,9 +40,9 @@ There were 4 parts to the exercise:
 
 All methods use "POST" methods when sending data and data is encoded with "application/x-www-form-urlencoded".
 
-- The `Authorize` method prepares the payment, and may be used at the start of a checkout process, for example. This amount is held on the customer's card for up to a week. If the payment is not captured in this time, the payment is cancelled and funds released.
-- The `Capture` method captures the payment by accessing its retrieved authorized ID
-- The `Cancel` method cancels the payment, also by accessing the authorized ID. The remaining `amount_capturable` will be refunded.
+- The [`Authorize`](https://stripe.com/docs/api/payment_intents/create) method prepares the payment, and may be used at the start of a checkout process, for example. This amount is held on the customer's card for up to a week. If the payment is not captured in this time, the payment is cancelled and funds released.
+- The [`Capture`](https://stripe.com/docs/api/payment_intents/capture) method captures the payment by accessing its retrieved authorized ID
+- The [`Cancel`](https://stripe.com/docs/api/payment_intents/cancel) method cancels the payment, also by accessing the authorized ID. The remaining `amount_capturable` will be refunded.
 
 You can test and monitor different responses using these [test card numbers](https://stripe.com/docs/testing#cards-responses) by inserting them into the payment object in `main.ts`.
 
