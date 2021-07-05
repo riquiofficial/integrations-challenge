@@ -20,7 +20,6 @@ This API Key, along with your [account ID](https://dashboard.stripe.com/settings
 Ensure you have the latest versions of NPM and Yarn installed. Install required packages:
 
 ```bash
-npm install
 yarn install
 ```
 
